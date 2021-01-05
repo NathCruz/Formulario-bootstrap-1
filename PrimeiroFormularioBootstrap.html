@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Formulário</title>
+    <meta charset="utf-8" />
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <style>
+        h2 {
+            font-family: Lobster, Monospace;
+        }
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            padding: 10px;
+            transform: translate(-50%, -50%);
+            background: rgb(255, 255, 255);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.644);
+            border-radius: 10px;
+
+        }
+        html {
+            height: 100%;
+            display: block;
+        }
+        body {
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+            background: linear-gradient(#dfe5f0, #539aeb);
+        }
+        
+    </style>
+  </head>
+  <body>
+    <form action="" method="POST" name="formulario">
+      <h2 class="text-primary text-center">Preencha os dados a seguir:</h2>
+      <br>
+      <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
+        <label class="form-label text-primary" for="nome">Nome da empresa:</label>
+        <input type="text" id="nome" class="form-control"/>
+    </div>
+      <div class="col-md-6 offset-md-3">
+        <label class="form-label text-primary" for="nomeFantasia">Nome fantasia:</label>
+        <input type="text" id="nomeFantasia" class="form-control" />
+      </div>
+      <div class="col-md-6 offset-md-3">
+        <label class="form-label text-primary" for="cnpj">Cnpj:</label>
+        <input type="text" placeholder="Ex.: 00.000.000/000-00" id="cnpj" class="form-control" onkeypress="$(this).mask('00.000.000/0000-00');"/>
+      </div>
+      <div class="col-md-6 offset-md-3">
+        <label class="form-label text-primary" for="telefone">Telefone:</label>
+        <input type="text" id="telefone" placeholder="Ex.: (00)0000-0000" class="form-control" onkeypress="$(this).mask('(00) 0000-0000')"/>
+    </div>
+      <div class="col-md-6 offset-md-3">
+          <label class="form-label text-primary" for="endereco">Endereço:</label>
+          <input type="text" id="endereço" class="form-control"/>
+      </div>
+      <div class="col-md-6 offset-md-3">
+          <label class="form-label text-primary" for="cep">Cep:</label>
+          <input type="text" placeholder="Ex.: 00000-000" id="cep" class="form-control" onkeypress="$(this).mask('00.000-000')"/>
+          <br>
+      </div>
+      <div class="form-group">
+      <div class="col-md-6 offset-md-3">
+          <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="termos"/>
+          <label class="form-check-label" for="termos">Sua empresa aceita os termos de privacidade e deseja fazer parte do clube de associados</label>
+          </div>
+      <div class="text-center">
+        <br>
+          <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i><span> Enviar</span></button>
+        </div>
+      </div>      
+    </div>
+    </form>
+  </body>
+</html>
